@@ -27,6 +27,8 @@ public class TimelineActivity extends ActionBarActivity {
 
     private ListView lvTweets;
 
+    private JsonHttpResponseHandler moreTweetsHandler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,7 @@ public class TimelineActivity extends ActionBarActivity {
         client = TwitterApplication.getRestClient();
 
         setupView();
+        setupListeners();
 
         tweets = new ArrayList<Tweet>();
         aTweets = new TweetsArrayAdapter(this, tweets);
@@ -46,8 +49,8 @@ public class TimelineActivity extends ActionBarActivity {
         lvTweets = (ListView) findViewById(R.id.lvTweets);
     }
 
-    private void populateTimeline() {
-        client.getHomeTimeline(25,1, new JsonHttpResponseHandler() {
+    private void setupListeners() {
+        moreTweetsHandler = new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                 aTweets.addAll(Tweet.fromJSONArray(response));
@@ -58,7 +61,18 @@ public class TimelineActivity extends ActionBarActivity {
             public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
                 super.onFailure(statusCode, headers, throwable, errorResponse);
             }
+        };
+
+        lvTweets.setOnScrollListener(new EndlessScrollListener() {
+            @Override
+            public void onLoadMore(int page, int totalItemsCount) {
+                client.getHomeTimelinePreviousIds(25, tweets.get(tweets.size()-1).getUid(), moreTweetsHandler);
+            }
         });
+    }
+
+    private void populateTimeline() {
+        client.getHomeTimeline(25,1, moreTweetsHandler);
     }
 
 
