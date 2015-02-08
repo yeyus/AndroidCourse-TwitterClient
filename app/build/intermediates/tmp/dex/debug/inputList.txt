@@ -1,0 +1,11 @@
+/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/classes/debug
+/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-e25d568052e4206d92ed1102fd54f027164495c6.jar
+/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/codepath-utils-765c9213b8621d5e293ff97a236ca99cfe4406e4.jar
+/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/codepath-oauth-0.4.1-865b3ac3aa7e9e89c982b8059d28a2e37cb057be.jar
+/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/ActiveAndroid-3.1-08c6335cd-719b1dd262d6652551f4787101d6c7742938fced.jar
+/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/scribe-codepath-0.0.3-580cca1a37935a4094cce5a10bf53e2c7ec38f6f.jar
+/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.6-7b602f2d3261594d9bde864bb4dad8f6fb6f9a2c.jar
+/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/picasso-2.4.0-e861e58198072b6a1d7cf8883fc8fc13a5101203.jar
+/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-3400fa576668ff9a71b9a1e49bb79c9ffb0f5fa0.jar
+/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/classes-a9b986720fdb208480a7630e57726356c88805df.jar
+/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/classes-aa96bda159aea40201e1b25e69bcb83cea8002c0.jar
