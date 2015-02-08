@@ -23,6 +23,7 @@ public class TweetsArrayAdapter extends ArrayAdapter<Tweet> {
         ImageView profileImage;
         TextView username;
         TextView body;
+        TextView relativeTime;
     }
 
     public TweetsArrayAdapter(Context context, List<Tweet> objects) {
@@ -41,6 +42,7 @@ public class TweetsArrayAdapter extends ArrayAdapter<Tweet> {
             viewHolder.profileImage = (ImageView) convertView.findViewById(R.id.ivProfileImage);
             viewHolder.username = (TextView) convertView.findViewById(R.id.tvUsername);
             viewHolder.body = (TextView) convertView.findViewById(R.id.tvBody);
+            viewHolder.relativeTime = (TextView) convertView.findViewById(R.id.tvRelativeTime);
             convertView.setTag(viewHolder);
         } else {
             viewHolder= (ViewHolder) convertView.getTag();
@@ -48,6 +50,7 @@ public class TweetsArrayAdapter extends ArrayAdapter<Tweet> {
 
         viewHolder.username.setText(tweet.getUser().getScreenName());
         viewHolder.body.setText(tweet.getBody());
+        viewHolder.relativeTime.setText(tweet.getRelativeCreatedAt());
 
         Picasso.with(getContext())
                 .load(tweet.getUser().getProfileImageUrl())
