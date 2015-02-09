@@ -5,32 +5,46 @@ import android.text.format.DateUtils;
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
+import com.activeandroid.query.Select;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 /**
  * Created by yeyus on 2/7/15.
  */
 @Table(name = "Tweets")
-public class Tweet extends Model {
+public class Tweet extends Model implements Serializable {
 
-    @Column(name = "uid")
+    private static final long serialVersionUID = 849209183L;
+
+    @Column(name = "uid", index = true, onUniqueConflict = Column.ConflictAction.REPLACE)
     private long uid;
 
     @Column(name = "body")
     private String body;
 
+    @Column(name = "user", onUpdate = Column.ForeignKeyAction.CASCADE, onDelete = Column.ForeignKeyAction.CASCADE)
     private User user;
 
     @Column(name = "createdAt")
     private String createdAt;
+
+    @Column(name = "retweetCount")
+    private int retweetCount;
+
+    @Column(name = "favouritesCount")
+    private int favouritesCount;
+
+    public Tweet() { super(); }
 
     public String getCreatedAt() {
         return createdAt;
@@ -46,6 +60,14 @@ public class Tweet extends Model {
 
     public User getUser() {
         return user;
+    }
+
+    public int getRetweetCount() {
+        return retweetCount;
+    }
+
+    public int getFavouritesCount() {
+        return favouritesCount;
     }
 
     public String getRelativeCreatedAt() {
@@ -73,6 +95,12 @@ public class Tweet extends Model {
             tw.uid = jsonObject.getLong("id");
             tw.createdAt = jsonObject.getString("created_at");
             tw.user = User.fromJSON(jsonObject.getJSONObject("user"));
+            if(!jsonObject.isNull("retweet_count")) {
+                tw.retweetCount = jsonObject.getInt("retweet_count");
+            }
+            if(!jsonObject.isNull("favourites_count")) {
+                tw.favouritesCount = jsonObject.getInt("favourites_count");
+            }
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -93,5 +121,13 @@ public class Tweet extends Model {
         }
 
         return tweets;
+    }
+
+    public static List<Tweet> getAll() {
+        return new Select()
+                .from(Tweet.class)
+                .orderBy("uid DESC")
+                .limit(50)
+                .execute();
     }
 }

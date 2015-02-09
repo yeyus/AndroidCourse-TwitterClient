@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:name=".TwitterApplication"
@@ -21,7 +21,7 @@
         android:theme="@style/AppTheme" >
         <meta-data
             android:name="AA_DB_NAME"
-            android:value="RestClient.db" />
+            android:value="TwitterClient.db" />
         <meta-data
             android:name="AA_DB_VERSION"
             android:value="1" />
@@ -49,6 +49,14 @@
         <activity
             android:name=".TimelineActivity"
             android:label="@string/title_activity_timeline" >
+        </activity>
+        <activity
+            android:name=".ComposeActivity"
+            android:label="@string/title_activity_compose"
+            android:parentActivityName=".TimelineActivity"
+            android:windowSoftInputMode="stateAlwaysVisible" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.codepath.apps.twitterclient.TimelineActivity" />
         </activity>
     </application>
 

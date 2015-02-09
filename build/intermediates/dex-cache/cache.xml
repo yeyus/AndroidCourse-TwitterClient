@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/home/yeyus/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.6/a845a88238be0b5be9d238652c1bc0605ef91f52/android-async-http-1.4.6.jar"
+        jar="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/libs/codepath-oauth-0.4.1.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="a845a88238be0b5be9d238652c1bc0605ef91f52">
-        <dex dex="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.6-7b602f2d3261594d9bde864bb4dad8f6fb6f9a2c.jar" />
+        sha1="e2bf2d92cfe90d44287c510d955d0c979631e99e">
+        <dex dex="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/codepath-oauth-0.4.1-865b3ac3aa7e9e89c982b8059d28a2e37cb057be.jar" />
     </item>
     <item
         jar="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/libs/codepath-utils.jar"
@@ -16,25 +16,11 @@
         <dex dex="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/codepath-utils-765c9213b8621d5e293ff97a236ca99cfe4406e4.jar" />
     </item>
     <item
-        jar="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/libs/codepath-oauth-0.4.1.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="e2bf2d92cfe90d44287c510d955d0c979631e99e">
-        <dex dex="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/codepath-oauth-0.4.1-865b3ac3aa7e9e89c982b8059d28a2e37cb057be.jar" />
-    </item>
-    <item
         jar="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="686344a780033e4ba22b926cd225f8d4941247e6">
         <dex dex="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/classes-aa96bda159aea40201e1b25e69bcb83cea8002c0.jar" />
-    </item>
-    <item
-        jar="/home/yeyus/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.4.0/f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2/picasso-2.4.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
-        <dex dex="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/picasso-2.4.0-e861e58198072b6a1d7cf8883fc8fc13a5101203.jar" />
     </item>
     <item
         jar="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/libs/scribe-codepath-0.0.3.jar"
@@ -70,6 +56,27 @@
         revision="21.1.2"
         sha1="955936734b2b876772fdaf23d1bec3820fb0d1d5">
         <dex dex="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/ActiveAndroid-3.1-08c6335cd-719b1dd262d6652551f4787101d6c7742938fced.jar" />
+    </item>
+    <item
+        jar="/home/yeyus/.gradle/caches/modules-2/files-2.1/com.michaelpardo/activeandroid/3.1.0-SNAPSHOT/4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08/activeandroid-3.1.0-SNAPSHOT.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08">
+        <dex dex="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/activeandroid-3.1.0-SNAPSHOT-0e4a604a0eb47ca261f59769c18f43c16ed76e80.jar" />
+    </item>
+    <item
+        jar="/home/yeyus/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.6/a845a88238be0b5be9d238652c1bc0605ef91f52/android-async-http-1.4.6.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a845a88238be0b5be9d238652c1bc0605ef91f52">
+        <dex dex="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.6-7b602f2d3261594d9bde864bb4dad8f6fb6f9a2c.jar" />
+    </item>
+    <item
+        jar="/home/yeyus/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.4.0/f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2/picasso-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
+        <dex dex="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/picasso-2.4.0-e861e58198072b6a1d7cf8883fc8fc13a5101203.jar" />
     </item>
 
 </items>

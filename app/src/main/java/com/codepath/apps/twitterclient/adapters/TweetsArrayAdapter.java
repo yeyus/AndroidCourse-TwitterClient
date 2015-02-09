@@ -1,6 +1,7 @@
 package com.codepath.apps.twitterclient.adapters;
 
 import android.content.Context;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +25,9 @@ public class TweetsArrayAdapter extends ArrayAdapter<Tweet> {
         TextView username;
         TextView body;
         TextView relativeTime;
+        TextView retweetCount;
+        TextView favCount;
+        TextView handle;
     }
 
     public TweetsArrayAdapter(Context context, List<Tweet> objects) {
@@ -43,14 +47,32 @@ public class TweetsArrayAdapter extends ArrayAdapter<Tweet> {
             viewHolder.username = (TextView) convertView.findViewById(R.id.tvUsername);
             viewHolder.body = (TextView) convertView.findViewById(R.id.tvBody);
             viewHolder.relativeTime = (TextView) convertView.findViewById(R.id.tvRelativeTime);
+            viewHolder.retweetCount = (TextView) convertView.findViewById(R.id.tvRetweetsCount);
+            viewHolder.favCount = (TextView) convertView.findViewById(R.id.tvFavCount);
+            viewHolder.handle = (TextView) convertView.findViewById(R.id.tvHandle);
             convertView.setTag(viewHolder);
         } else {
             viewHolder= (ViewHolder) convertView.getTag();
         }
 
-        viewHolder.username.setText(tweet.getUser().getScreenName());
+        viewHolder.username.setText(tweet.getUser().getName());
+        viewHolder.handle.setText("@"+tweet.getUser().getScreenName());
+
         viewHolder.body.setText(tweet.getBody());
+        viewHolder.body.setMovementMethod(LinkMovementMethod.getInstance());
         viewHolder.relativeTime.setText(tweet.getRelativeCreatedAt());
+
+        if(tweet.getRetweetCount() > 0) {
+            viewHolder.retweetCount.setText(Integer.toString(tweet.getRetweetCount()));
+        } else {
+            viewHolder.retweetCount.setText("");
+        }
+
+        if(tweet.getFavouritesCount() > 0) {
+            viewHolder.favCount.setText(Integer.toString(tweet.getFavouritesCount()));
+        } else {
+            viewHolder.favCount.setText("");
+        }
 
         Picasso.with(getContext())
                 .load(tweet.getUser().getProfileImageUrl())

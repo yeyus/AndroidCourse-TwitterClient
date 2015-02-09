@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.codepath.apps.twitterclient.ComposeActivity">
+    <item
+        android:id="@+id/action_send"
+        android:title="@string/action_send"
+        android:orderInCategory="2"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/txtCharsLeft"
+        android:title="150"
+        android:orderInCategory="1"
+        app:showAsAction="always"
+        android:enabled="false"/>
+</menu>
