@@ -27,6 +27,7 @@ public class ComposeActivity extends ActionBarActivity {
     private static final int REQUEST_COMPOSE = 1337;
 
     private User profile;
+    private Tweet replyTo;
 
     private ImageView ivProfilePic;
     private TextView tvScreenName;
@@ -40,16 +41,18 @@ public class ComposeActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compose);
         profile = (User) getIntent().getSerializableExtra("profile");
+        replyTo = (Tweet) getIntent().getSerializableExtra("reply");
 
         setupView();
-        setupListeners();
 
         if (profile != null) {
             Picasso.with(this).load(profile.getProfileImageUrl()).into(ivProfilePic);
             tvScreenName.setText("@" + profile.getScreenName());
         }
 
-
+        if (replyTo != null) {
+            etBody.setText("@" + replyTo.getUser().getScreenName() + " ");
+        }
 
         etBody.requestFocus();
     }
@@ -70,7 +73,9 @@ public class ComposeActivity extends ActionBarActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                txtCharCount.setTitle(Integer.toString(150 - s.length()));
+                if(txtCharCount != null) {
+                    txtCharCount.setTitle(Integer.toString(150 - s.length()));
+                }
             }
         });
     }
@@ -80,6 +85,7 @@ public class ComposeActivity extends ActionBarActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_compose, menu);
         txtCharCount = menu.findItem(R.id.txtCharsLeft);
+        setupListeners();
         return true;
     }
 

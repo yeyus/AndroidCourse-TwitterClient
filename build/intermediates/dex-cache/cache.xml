@@ -2,81 +2,74 @@
 <items version="2" >
 
     <item
-        jar="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/libs/codepath-oauth-0.4.1.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="e2bf2d92cfe90d44287c510d955d0c979631e99e">
-        <dex dex="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/codepath-oauth-0.4.1-865b3ac3aa7e9e89c982b8059d28a2e37cb057be.jar" />
-    </item>
-    <item
-        jar="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/libs/codepath-utils.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="10901a5ef726eacf1b2443b7f38dc4cc9cd3f7d4">
-        <dex dex="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/codepath-utils-765c9213b8621d5e293ff97a236ca99cfe4406e4.jar" />
-    </item>
-    <item
-        jar="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar"
+        jar="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="686344a780033e4ba22b926cd225f8d4941247e6">
-        <dex dex="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/classes-aa96bda159aea40201e1b25e69bcb83cea8002c0.jar" />
+        <dex dex="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/classes-d34e5d8aa9a488a269699450b5c1231685cf0986.jar" />
     </item>
     <item
-        jar="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/libs/scribe-codepath-0.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a580d06de954001f787e8d024bfcf931fe30bdda">
-        <dex dex="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/scribe-codepath-0.0.3-580cca1a37935a4094cce5a10bf53e2c7ec38f6f.jar" />
-    </item>
-    <item
-        jar="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="95fd37732ec852e99f07eeb516a3650172f1d136">
-        <dex dex="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/classes-a9b986720fdb208480a7630e57726356c88805df.jar" />
-    </item>
-    <item
-        jar="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/libs/internal_impl-21.0.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0">
-        <dex dex="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-3400fa576668ff9a71b9a1e49bb79c9ffb0f5fa0.jar" />
-    </item>
-    <item
-        jar="/home/yeyus/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e">
-        <dex dex="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-e25d568052e4206d92ed1102fd54f027164495c6.jar" />
-    </item>
-    <item
-        jar="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/libs/ActiveAndroid-3.1-08c6335cd.jar"
+        jar="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/libs/ActiveAndroid-3.1-08c6335cd.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="955936734b2b876772fdaf23d1bec3820fb0d1d5">
-        <dex dex="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/ActiveAndroid-3.1-08c6335cd-719b1dd262d6652551f4787101d6c7742938fced.jar" />
+        <dex dex="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/ActiveAndroid-3.1-08c6335cd-a6d1d4cff3bad32e5430f89c4cdaf488caef89ff.jar" />
     </item>
     <item
-        jar="/home/yeyus/.gradle/caches/modules-2/files-2.1/com.michaelpardo/activeandroid/3.1.0-SNAPSHOT/4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08/activeandroid-3.1.0-SNAPSHOT.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4ab7b0182975bc57c49efc5e0b3baa4a10e4ec08">
-        <dex dex="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/activeandroid-3.1.0-SNAPSHOT-0e4a604a0eb47ca261f59769c18f43c16ed76e80.jar" />
-    </item>
-    <item
-        jar="/home/yeyus/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.6/a845a88238be0b5be9d238652c1bc0605ef91f52/android-async-http-1.4.6.jar"
+        jar="/Users/jesusft/.gradle/caches/modules-2/files-2.1/com.loopj.android/android-async-http/1.4.6/a845a88238be0b5be9d238652c1bc0605ef91f52/android-async-http-1.4.6.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="a845a88238be0b5be9d238652c1bc0605ef91f52">
-        <dex dex="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.6-7b602f2d3261594d9bde864bb4dad8f6fb6f9a2c.jar" />
+        <dex dex="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.6-91d8f612854a9cccf745825429d75e6f71041b98.jar" />
     </item>
     <item
-        jar="/home/yeyus/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.4.0/f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2/picasso-2.4.0.jar"
+        jar="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/libs/scribe-codepath-0.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a580d06de954001f787e8d024bfcf931fe30bdda">
+        <dex dex="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/scribe-codepath-0.0.3-57e3841f78bc3a19859d33535cfb17049550be2a.jar" />
+    </item>
+    <item
+        jar="/Users/jesusft/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.4.0/f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2/picasso-2.4.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
-        <dex dex="/home/yeyus/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/picasso-2.4.0-e861e58198072b6a1d7cf8883fc8fc13a5101203.jar" />
+        <dex dex="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/picasso-2.4.0-4c01e1a4f0792a94bacc46b6a3261f3c9693555c.jar" />
+    </item>
+    <item
+        jar="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/libs/codepath-utils.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="10901a5ef726eacf1b2443b7f38dc4cc9cd3f7d4">
+        <dex dex="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/codepath-utils-c348a7dd232359cca9a3cd254b7beee64c8c2c53.jar" />
+    </item>
+    <item
+        jar="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/libs/internal_impl-21.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0">
+        <dex dex="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-335afcf900a851cabe81eb904422cb92b37d303c.jar" />
+    </item>
+    <item
+        jar="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/libs/codepath-oauth-0.4.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e2bf2d92cfe90d44287c510d955d0c979631e99e">
+        <dex dex="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/codepath-oauth-0.4.1-8b49166f3b7a389029e838a86f2cd65f2fdd8280.jar" />
+    </item>
+    <item
+        jar="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="95fd37732ec852e99f07eeb516a3650172f1d136">
+        <dex dex="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/classes-217349fb44b18e806f71b49373005ea8649fb92b.jar" />
+    </item>
+    <item
+        jar="/Users/jesusft/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e">
+        <dex dex="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-ebf5afa8bdc279ee119016585cc34b7702666df1.jar" />
     </item>
 
 </items>

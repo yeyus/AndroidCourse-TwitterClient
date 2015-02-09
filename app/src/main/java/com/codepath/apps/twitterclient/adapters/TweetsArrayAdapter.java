@@ -1,14 +1,18 @@
 package com.codepath.apps.twitterclient.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.codepath.apps.twitterclient.ComposeActivity;
 import com.codepath.apps.twitterclient.R;
 import com.codepath.apps.twitterclient.models.Tweet;
 import com.squareup.picasso.Picasso;
@@ -20,6 +24,12 @@ import java.util.List;
  */
 public class TweetsArrayAdapter extends ArrayAdapter<Tweet> {
 
+    public interface TweetReplyActionListener {
+        public void OnReplyAction(Tweet tweet);
+    }
+
+    private TweetReplyActionListener listener;
+
     private static class ViewHolder {
         ImageView profileImage;
         TextView username;
@@ -28,16 +38,21 @@ public class TweetsArrayAdapter extends ArrayAdapter<Tweet> {
         TextView retweetCount;
         TextView favCount;
         TextView handle;
+        ImageButton reply;
     }
 
     public TweetsArrayAdapter(Context context, List<Tweet> objects) {
         super(context, android.R.layout.simple_list_item_1, objects);
     }
 
+    public void setReplyListener(TweetReplyActionListener listener) {
+        this.listener = listener;
+    }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        Tweet tweet = getItem(position);
+        final Tweet tweet = getItem(position);
 
         ViewHolder viewHolder;
         if (convertView == null) {
@@ -50,6 +65,7 @@ public class TweetsArrayAdapter extends ArrayAdapter<Tweet> {
             viewHolder.retweetCount = (TextView) convertView.findViewById(R.id.tvRetweetsCount);
             viewHolder.favCount = (TextView) convertView.findViewById(R.id.tvFavCount);
             viewHolder.handle = (TextView) convertView.findViewById(R.id.tvHandle);
+            viewHolder.reply = (ImageButton) convertView.findViewById(R.id.btnReply);
             convertView.setTag(viewHolder);
         } else {
             viewHolder= (ViewHolder) convertView.getTag();
@@ -61,6 +77,16 @@ public class TweetsArrayAdapter extends ArrayAdapter<Tweet> {
         viewHolder.body.setText(tweet.getBody());
         viewHolder.body.setMovementMethod(LinkMovementMethod.getInstance());
         viewHolder.relativeTime.setText(tweet.getRelativeCreatedAt());
+
+        // Call Reply listener if listener is set
+        viewHolder.reply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(TweetsArrayAdapter.this.listener != null) {
+                    listener.OnReplyAction(tweet);
+                }
+            }
+        });
 
         if(tweet.getRetweetCount() > 0) {
             viewHolder.retweetCount.setText(Integer.toString(tweet.getRetweetCount()));

@@ -23,7 +23,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TimelineActivity extends ActionBarActivity {
+public class TimelineActivity extends ActionBarActivity implements TweetsArrayAdapter.TweetReplyActionListener {
 
     private static final int REQUEST_COMPOSE = 1337;
 
@@ -50,6 +50,7 @@ public class TimelineActivity extends ActionBarActivity {
 
         tweets = new ArrayList<Tweet>();
         aTweets = new TweetsArrayAdapter(this, tweets);
+        aTweets.setReplyListener(this);
         lvTweets.setAdapter(aTweets);
 
         fetchUserProfile();
@@ -176,5 +177,12 @@ public class TimelineActivity extends ActionBarActivity {
             tweets.add(0, t);
             aTweets.notifyDataSetChanged();
         }
+    }
+
+    public void OnReplyAction(Tweet tweet) {
+        Intent i = new Intent(this, ComposeActivity.class);
+        i.putExtra("profile", userProfile);
+        i.putExtra("reply", tweet);
+        startActivityForResult(i, REQUEST_COMPOSE);
     }
 }
