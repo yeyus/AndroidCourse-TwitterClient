@@ -23,3 +23,6 @@
 * Advanced: User can select "reply" from detail view to respond to a tweet
     - User can also reply from timeline view (Extra)
 * Advanced: Improve the user interface and theme the app to feel "twitter branded"
+
+
+![](https://raw.githubusercontent.com/yeyus/AndroidCourse-TwitterClient/master/TwitterClient.gif)
