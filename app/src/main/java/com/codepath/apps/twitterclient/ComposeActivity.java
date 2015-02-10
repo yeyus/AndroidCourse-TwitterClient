@@ -44,6 +44,7 @@ public class ComposeActivity extends ActionBarActivity {
         replyTo = (Tweet) getIntent().getSerializableExtra("reply");
 
         setupView();
+        getSupportActionBar().setHomeButtonEnabled(true);
 
         if (profile != null) {
             Picasso.with(this).load(profile.getProfileImageUrl()).into(ivProfilePic);

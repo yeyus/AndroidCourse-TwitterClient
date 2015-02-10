@@ -6,6 +6,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -118,6 +120,15 @@ public class TimelineActivity extends ActionBarActivity implements TweetsArrayAd
             @Override
             public void onLoadMore(int page, int totalItemsCount) {
                 client.getHomeTimeline(25, -1, tweets.get(tweets.size()-1).getUid(), moreTweetsHandler);
+            }
+        });
+
+        lvTweets.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent i = new Intent(TimelineActivity.this, TweetActivity.class);
+                i.putExtra("tweet", aTweets.getItem(position));
+                startActivity(i);
             }
         });
     }

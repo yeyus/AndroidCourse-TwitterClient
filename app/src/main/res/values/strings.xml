@@ -8,5 +8,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_compose">Compose Tweet</string>
     <string name="action_send">Send</string>
+    <string name="title_activity_tweet">Tweet</string>
 
 </resources>
