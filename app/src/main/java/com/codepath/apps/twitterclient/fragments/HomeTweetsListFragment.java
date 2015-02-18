@@ -13,6 +13,11 @@ import com.codepath.apps.twitterclient.TwitterClient;
 import com.codepath.apps.twitterclient.models.Tweet;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
+import org.apache.http.Header;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -67,6 +72,27 @@ public class HomeTweetsListFragment extends TweetsListFragment {
         }
 
         // Try network request
-        client.getHomeTimeline(25, since_uid, -1, moreTweetsHandler);
+        client.getHomeTimeline(25, since_uid, -1, new JsonHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
+                ArrayList<Tweet> tweets = Tweet.fromJSONArray(response);
+                HomeTweetsListFragment.this.addAll(tweets);
+
+                // Persist in database
+                for(int i = tweets.size() - 1; i >= 0; i--) {
+                    tweets.get(i).getUser().save();
+                    tweets.get(i).save();
+                    HomeTweetsListFragment.this.tweets.add(0, tweets.get(i));
+                }
+
+                swipeContainer.setRefreshing(false);
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                swipeContainer.setRefreshing(false);
+                super.onFailure(statusCode, headers, throwable, errorResponse);
+            }
+        });
     }
 }
