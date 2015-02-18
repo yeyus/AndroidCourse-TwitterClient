@@ -1,20 +1,18 @@
 package com.codepath.apps.twitterclient.adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.codepath.apps.twitterclient.ComposeActivity;
 import com.codepath.apps.twitterclient.R;
 import com.codepath.apps.twitterclient.models.Tweet;
+import com.codepath.apps.twitterclient.models.User;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -28,7 +26,12 @@ public class TweetsArrayAdapter extends ArrayAdapter<Tweet> {
         public void OnReplyAction(Tweet tweet);
     }
 
-    private TweetReplyActionListener listener;
+    public interface ProfileOnClickListener {
+        public void OnProfileClick(User user);
+    }
+
+    private TweetReplyActionListener replyListener;
+    private ProfileOnClickListener profileListener;
 
     private static class ViewHolder {
         ImageView profileImage;
@@ -46,7 +49,7 @@ public class TweetsArrayAdapter extends ArrayAdapter<Tweet> {
     }
 
     public void setReplyListener(TweetReplyActionListener listener) {
-        this.listener = listener;
+        this.replyListener = listener;
     }
 
     @Override
@@ -78,12 +81,21 @@ public class TweetsArrayAdapter extends ArrayAdapter<Tweet> {
         viewHolder.body.setMovementMethod(LinkMovementMethod.getInstance());
         viewHolder.relativeTime.setText(tweet.getRelativeCreatedAt());
 
-        // Call Reply listener if listener is set
+        // Call Reply replyListener if replyListener is set
         viewHolder.reply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(TweetsArrayAdapter.this.listener != null) {
-                    listener.OnReplyAction(tweet);
+                if(TweetsArrayAdapter.this.replyListener != null) {
+                    replyListener.OnReplyAction(tweet);
+                }
+            }
+        });
+
+        viewHolder.profileImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(TweetsArrayAdapter.this.profileListener != null) {
+                    profileListener.OnProfileClick(tweet.getUser());
                 }
             }
         });
