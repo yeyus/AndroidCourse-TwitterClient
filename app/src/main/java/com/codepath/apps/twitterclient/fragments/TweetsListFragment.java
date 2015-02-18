@@ -13,6 +13,7 @@ import android.widget.ListView;
 
 import com.codepath.apps.twitterclient.ComposeActivity;
 import com.codepath.apps.twitterclient.EndlessScrollListener;
+import com.codepath.apps.twitterclient.ProfileActivity;
 import com.codepath.apps.twitterclient.R;
 import com.codepath.apps.twitterclient.TimelineActivity;
 import com.codepath.apps.twitterclient.TweetActivity;
@@ -20,6 +21,7 @@ import com.codepath.apps.twitterclient.TwitterApplication;
 import com.codepath.apps.twitterclient.TwitterClient;
 import com.codepath.apps.twitterclient.adapters.TweetsArrayAdapter;
 import com.codepath.apps.twitterclient.models.Tweet;
+import com.codepath.apps.twitterclient.models.User;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
 import org.apache.http.Header;
@@ -32,7 +34,7 @@ import java.util.List;
 /**
  * Created by yeyus on 2/14/15.
  */
-public class TweetsListFragment extends Fragment implements TweetsArrayAdapter.TweetReplyActionListener {
+public class TweetsListFragment extends Fragment implements TweetsArrayAdapter.TweetReplyActionListener, TweetsArrayAdapter.ProfileOnClickListener {
 
     private static final int REQUEST_COMPOSE = 1337;
 
@@ -130,5 +132,12 @@ public class TweetsListFragment extends Fragment implements TweetsArrayAdapter.T
 
     protected Tweet getOldestTweet() {
         return tweets.get(tweets.size()-1);
+    }
+
+    @Override
+    public void OnProfileClick(User user) {
+        Intent i = new Intent(getActivity(), ProfileActivity.class);
+        i.putExtra("screen_name", user.getScreenName());
+        startActivity(i);
     }
 }
