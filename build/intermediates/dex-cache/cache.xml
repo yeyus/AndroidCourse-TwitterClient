@@ -23,18 +23,18 @@
         <dex dex="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/android-async-http-1.4.6-91d8f612854a9cccf745825429d75e6f71041b98.jar" />
     </item>
     <item
-        jar="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/libs/scribe-codepath-0.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a580d06de954001f787e8d024bfcf931fe30bdda">
-        <dex dex="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/scribe-codepath-0.0.3-57e3841f78bc3a19859d33535cfb17049550be2a.jar" />
-    </item>
-    <item
         jar="/Users/jesusft/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.4.0/f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2/picasso-2.4.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
         <dex dex="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/picasso-2.4.0-4c01e1a4f0792a94bacc46b6a3261f3c9693555c.jar" />
+    </item>
+    <item
+        jar="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/libs/scribe-codepath-0.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a580d06de954001f787e8d024bfcf931fe30bdda">
+        <dex dex="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/scribe-codepath-0.0.3-57e3841f78bc3a19859d33535cfb17049550be2a.jar" />
     </item>
     <item
         jar="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/libs/codepath-utils.jar"
@@ -49,6 +49,13 @@
         revision="21.1.2"
         sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0">
         <dex dex="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-335afcf900a851cabe81eb904422cb92b37d303c.jar" />
+    </item>
+    <item
+        jar="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/exploded-aar/com.astuetz/pagerslidingtabstrip/1.0.1/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7912610ed96381c25c36d986eba422731b9641b6">
+        <dex dex="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/classes-ace3ddf6010f0a3d992a3e96151c45f65ffb798c.jar" />
     </item>
     <item
         jar="/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/libs/codepath-oauth-0.4.1.jar"

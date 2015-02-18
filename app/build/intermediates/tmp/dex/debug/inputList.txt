@@ -1,6 +1,7 @@
 /Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/classes/debug
 /Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-ebf5afa8bdc279ee119016585cc34b7702666df1.jar
 /Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/codepath-utils-c348a7dd232359cca9a3cd254b7beee64c8c2c53.jar
+/Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/classes-ace3ddf6010f0a3d992a3e96151c45f65ffb798c.jar
 /Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/codepath-oauth-0.4.1-8b49166f3b7a389029e838a86f2cd65f2fdd8280.jar
 /Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/ActiveAndroid-3.1-08c6335cd-a6d1d4cff3bad32e5430f89c4cdaf488caef89ff.jar
 /Users/jesusft/AndroidStudioProjects/AndroidCourse-TwitterClient/app/build/intermediates/pre-dexed/debug/scribe-codepath-0.0.3-57e3841f78bc3a19859d33535cfb17049550be2a.jar

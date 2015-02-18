@@ -9,5 +9,6 @@
     <string name="title_activity_compose">Compose Tweet</string>
     <string name="action_send">Send</string>
     <string name="title_activity_tweet">Tweet</string>
+    <string name="title_activity_profile">Profile</string>
 
 </resources>
